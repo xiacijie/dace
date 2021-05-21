@@ -1,0 +1,50 @@
+Traceback (most recent call last):
+  File "mapfusion_test.py", line 176, in <module>
+    test_fusion_simple()
+  File "mapfusion_test.py", line 72, in test_fusion_simple
+    sdfg = fusion.to_sdfg()
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/parser.py", line 196, in to_sdfg
+    return self.parse(*args, strict=strict, save=save)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/parser.py", line 282, in parse
+    sdfg = self.generate_pdp(*compilation_args, strict=strict)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/parser.py", line 389, in generate_pdp
+    strict=strict)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 185, in parse_dace_program
+    sdfg, _, _, _ = pv.parse_program(src_ast.body[0])
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 1223, in parse_program
+    self.visit_TopLevel(stmt)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/astutils.py", line 350, in visit_TopLevel
+    self.visit(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 1203, in visit
+    return super().visit(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/ast.py", line 271, in visit
+    return visitor(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 2218, in visit_For
+    extra_map_symbols=self._symbols_from_params(params, map_inputs))
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 1412, in _parse_subprogram
+    return pv.parse_program(node, is_tasklet)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 1223, in parse_program
+    self.visit_TopLevel(stmt)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/astutils.py", line 350, in visit_TopLevel
+    self.visit(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 1203, in visit
+    return super().visit(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/ast.py", line 271, in visit
+    return visitor(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 3897, in visit_With
+    self._parse_tasklet(state, node, name)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 2497, in _parse_tasklet
+    node, inputs, outputs, self.accesses = ttrans.parse_tasklet(node, name)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 759, in parse_tasklet
+    self.visit(tasklet_ast)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/ast.py", line 271, in visit
+    return visitor(node)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/astutils.py", line 319, in generic_visit
+    clsname)(value)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/newast.py", line 984, in visit_TopLevelExpr
+    name = rname(target)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/astutils.py", line 69, in rname
+    return rname(node.value)
+  File "/home/xiacijie/anaconda3/envs/dace/lib/python3.7/site-packages/dace-0.10.8-py3.7.egg/dace/frontend/python/astutils.py", line 99, in rname
+    raise TypeError('Invalid AST node type: ' + str(type(node)))
+TypeError: Invalid AST node type: <class '_ast.BinOp'>

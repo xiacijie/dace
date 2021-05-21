@@ -1,1 +1,24 @@
-hello
+Hello DaCe team,
+
+I am a compiler engineer intern at Huawei and my colleges and I are studying and discussing this awesome project. We encountered an issue when playing around with DaCe SDFG transformation test cases. 
+
+Here is the issue:
+
+DaCe comes with a syntax which enables user to define a Map
+What’s under the Map is the tasklet users defined for computation. As the computation, we can do scalar operations such as integer addition. 
+
+However, if we do tensor(matrix) operation inside that tasklet, for example, A@B or A+B, where A and B are two matrices, DaCe will give us an error. I’ve attached the error messages as a txt file below. 
+
+Here is the concrete code snippet which raises the error. You can try and run this example. 
+
+
+
+Look at line #16, where there is a matrix addition A+A. I believe this is the cause of the error. 
+
+Therefore, I would like to know, is tensor operation allowed in such situation? 
+If it is allowed, can I know the right syntax to write this?
+If not, I would like to know why this is not supported?
+
+Best,
+Cijie Xia 
+
